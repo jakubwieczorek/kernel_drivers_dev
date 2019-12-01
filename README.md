@@ -29,7 +29,7 @@ Run emulated environment:
 `bash start_qemu.sh`
 
 Enter /demo directory in emulated environment and register device:
-`ismod module.ko`
+`ismod my_module.ko`
 
 Run python test:
 `python3 test_adc.py`
