@@ -1,0 +1,7 @@
+#!/bin/bash
+
+KERNEL_SRC=${BRPATH}/output/build/linux-4.19.16
+
+PATH=${BRPATH}/output/host/usr/bin:$PATH
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -C $KERNEL_SRC modules M=$PWD

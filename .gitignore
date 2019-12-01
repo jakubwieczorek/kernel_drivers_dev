@@ -1,0 +1,7 @@
+*/buildroot-2019.08.1
+buildroot-2019.08.1.tar.bz2
+*.mod*
+*.o
+*.ko
+*.order
+*.cmd
