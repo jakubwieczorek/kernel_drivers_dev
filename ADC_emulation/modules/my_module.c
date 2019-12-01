@@ -95,7 +95,7 @@ ssize_t my_write(struct file *filp, const char __user *buf, size_t count, loff_t
 	  // convert char user buffer directly to long value, which is sampling rate
   	  kstrtol_return = kstrtoul_from_user(buf, count, 10, &new_sampling_rate); //copy data from user space to kernel space
 
-	  if(!kstrtol_return)
+	  if(!kstrtol_return && new_sampling_rate <= 1000 && new_sampling_rate > 0)
 	  {
 		sampling_rate = new_sampling_rate; // if no problem with conversion apply new sampling rate
 	  	return count;	
