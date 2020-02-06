@@ -34,6 +34,32 @@ Enter /demo directory in emulated environment and register device:
 Run python test:
 `python3 test_adc.py`
 
+## I2C communication
+The task was to communicate through I2C with STM32 connected to one of the USB ports.
+The idea was to implement **i2c_algorithm** and **i2c_adapter** structures and functions and within them 
+use uart functionality to talk with stm32. However in this version of the project only communication with normal plain
+file was established using kernel_write and kernel_read. On the STM32 microcontroller uart using dma wath coded, which sends,
+digital values of build in termistor. It was subjected to change after communication properly tuckled between stm32 and kernel driver, that is kernel driver sends data to stm using i2c adapter and algoruthm methods and /dev/ttyACM0 -- uart driver for stm.
+
+### How to start
+Build system in buildroot by calling 
+`bash prepare.sh`
+
+Compile driver
+`bash build.sh`
+
+Run emulated environment:
+`bash start_qemu.sh`
+
+Enter /demo directory in emulated environment and call setup.sh script which creates test.txt file and loads modules:
+`sh setup.sh`
+
+Run python test:
+`python3 test_adc.py`
+
+Output:
+
+
 ## Questions or need help?
 Don't hesitate to send me a mail on jakub.wieczorek0101@gmail.com.
 
