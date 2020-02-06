@@ -3,6 +3,7 @@
 BRPATH=/home/jakub/Downloads/kernel_drivers_dev/I2C_controller/driver/buildroot-2019.08.1/
 
 KERNEL_SRC=${BRPATH}/output/build/linux-4.19.16
+#KERNEL_SRC=${BRPATH}/output/build/linux-5.3.0-28-generic
 
 PATH=${BRPATH}/output/host/usr/bin:$PATH
 

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-BRPATH=/home/jakub/Downloads/kernel_drivers_dev/I2C_controller/driver/buildroot-2019.08.1/
-
-KERNEL_SRC=${BRPATH}/output/build/linux-4.19.16
-
-PATH=${BRPATH}/output/host/usr/bin:$PATH
-
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -C $KERNEL_SRC modules M=$PWD

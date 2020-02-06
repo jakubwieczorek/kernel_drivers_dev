@@ -1,2 +1,0 @@
-obj-m := my_module.o i2c.o stm32_i2c.o
-

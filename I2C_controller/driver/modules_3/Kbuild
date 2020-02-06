@@ -1,2 +1,0 @@
-obj-m := i2c_chip.o i2c_adapter.o
-

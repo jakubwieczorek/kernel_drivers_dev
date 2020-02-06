@@ -1,2 +1,2 @@
-obj-m := my_module.o
+obj-m := i2c_adapter.o
 
